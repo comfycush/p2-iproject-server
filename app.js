@@ -1,12 +1,12 @@
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV === 'development') {
   require('dotenv').config()
 }
 
-const baseUrl = 'http://localhost:3000'
+const baseUrl = 'http://findiss-server.herokuapp.com/'
 
 const express = require('express')
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000
 const cors = require('cors')
 const { nasa_API, nominatim_API, satDev_API } = require('./api/axios')
 const nodemailer = require('nodemailer')
