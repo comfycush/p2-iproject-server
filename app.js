@@ -2,7 +2,7 @@ if (process.env.NODE_ENV === 'development') {
   require('dotenv').config()
 }
 
-const baseUrl = 'http://findiss-server.herokuapp.com/'
+const baseUrl = 'http://13.236.186.149:3000'
 
 const express = require('express')
 const app = express()
